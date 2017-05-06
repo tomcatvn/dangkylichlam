@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect, session, url_for, flash
 from trashy import *
 from mongodb import *
+from nocache import nocache
 
 app = Flask(__name__)
 
 @app.route('/',methods=['GET','POST'])
+@nocache
 def main():
     note = None
     nv = NhanVienForm()
@@ -20,6 +22,7 @@ def main():
 
 
 @app.route('/dangky',methods=['GET','POST'])
+@nocache
 def dangky():
     if request.method == 'GET':
         form = LichLamForm()
@@ -32,6 +35,7 @@ def dangky():
         return redirect('dangky')
 
 @app.route('/xoa',methods=['GET','POST'])
+@nocache
 def xoa():
     if request.method == 'GET':
         form = LichLamForm()
