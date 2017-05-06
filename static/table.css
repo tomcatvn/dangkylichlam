@@ -1,0 +1,23 @@
+table , th , td{
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+td input {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+}
+td {
+    text-align: center;
+    position:relative;
+}
+table {
+    margin-left: 130px;
+    margin-top: 30px;
+}
+
+th {
+    width: 125px;
+    height: 80px;
+}

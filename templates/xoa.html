@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        td input {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+td {
+    text-align: center;
+    position:relative;
+}
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/table.css">
+    <meta charset="UTF-8">
+    <title>Xóa lịch làm</title>
+</head>
+<body>
+
+<div style="margin-left: 30px"><h3>Xin chào {{ tennv }}</h3>
+<a href="/logout"><button>Đăng xuất</button></a>
+<a href="/"><button>Trang chủ</button></a>
+<a href="/dangky"><button>Đăng ký lịch làm</button></a>
+<a href="/doimatkhau"><button>Đổi mật khẩu</button></a></div>
+<h2 align="center">XÓA LỊCH LÀM</h2>
+
+<form action="" method="post">
+<table style="w3-container">
+    <tr>
+        <th style="border-top-style: hidden; border-left-style: hidden"></th>
+        <th>Thứ 2</th>
+        <th>Thứ 3</th>
+        <th>Thứ 4</th>
+        <th>Thứ 5</th>
+        <th>Thứ 6</th>
+        <th>Thứ 7</th>
+        <th>Chủ Nhật</th>
+    </tr>
+    <tr>
+        <th>Sáng</th>
+        <td> {{ form.sangt2 }} {% for sangt2 in lichlam['sangt2'] %} {{ sangt2 }} <br> {% endfor %}</td>
+        <td> {{ form.sangt3 }} {% for sangt3 in lichlam['sangt3'] %} {{ sangt3 }} <br> {% endfor %}</td>
+        <td> {{ form.sangt4 }} {% for sangt4 in lichlam['sangt4'] %} {{ sangt4 }} <br> {% endfor %}</td>
+        <td> {{ form.sangt5 }} {% for sangt5 in lichlam['sangt2'] %} {{ sangt5 }} <br> {% endfor %}</td>
+        <td> {{ form.sangt6 }} {% for sangt6 in lichlam['sangt6'] %} {{ sangt6 }} <br> {% endfor %}</td>
+        <td> {{ form.sangt7 }} {% for sangt7 in lichlam['sangt7'] %} {{ sangt7 }} <br> {% endfor %}</td>
+        <td> {{ form.sangcn }} {% for sangcn in lichlam['sangcn'] %} {{ sangcn }} <br> {% endfor %}</td>
+    </tr>
+    <tr>
+        <th>Chiều</th>
+        <td> {{ form.chieut2 }} {% for chieut2 in lichlam['chieut2'] %} {{ chieut2 }} <br> {% endfor %}</td>
+        <td> {{ form.chieut3 }} {% for chieut3 in lichlam['chieut3'] %} {{ chieut3 }} <br> {% endfor %}</td>
+        <td> {{ form.chieut4 }} {% for chieut4 in lichlam['chieut4'] %} {{ chieut4 }} <br> {% endfor %}</td>
+        <td> {{ form.chieut5 }} {% for chieut5 in lichlam['chieut5'] %} {{ chieut5 }} <br> {% endfor %}</td>
+        <td> {{ form.chieut6 }} {% for chieut6 in lichlam['chieut6'] %} {{ chieut6 }} <br> {% endfor %}</td>
+        <td> {{ form.chieut7 }} {% for chieut7 in lichlam['chieut7'] %} {{ chieut7 }} <br> {% endfor %}</td>
+        <td> {{ form.chieucn }} {% for chieucn in lichlam['chieucn'] %} {{ chieucn }} <br> {% endfor %}</td>
+    </tr>
+    <tr>
+        <th>Tối</th>
+        <td> {{ form.toit2 }} {% for toit2 in lichlam['toit2'] %} {{ toit2 }} <br> {% endfor %}</td>
+        <td> {{ form.toit3 }} {% for toit3 in lichlam['toit3'] %} {{ toit3 }} <br> {% endfor %}</td>
+        <td> {{ form.toit4 }} {% for toit4 in lichlam['toit4'] %} {{ toit4 }} <br> {% endfor %}</td>
+        <td> {{ form.toit5 }} {% for toit5 in lichlam['toit5'] %} {{ toit5 }} <br> {% endfor %}</td>
+        <td> {{ form.toit6 }} {% for toit6 in lichlam['toit6'] %} {{ toit6 }} <br> {% endfor %}</td>
+        <td> {{ form.toit7 }} {% for toit2 in lichlam['toit7'] %} {{ toit7 }} <br> {% endfor %}</td>
+        <td> {{ form.toicn }} {% for toicn in lichlam['toicn'] %} {{ toicn }} <br> {% endfor %}</td>
+    </tr>
+</table>
+    <input type="submit" value="Xác nhận" style="position:fixed; margin-top: 20px; left: 200px">
+</form>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <title>Đổi mật khẩu</title>
+</head>
+<body>
+<div style="margin-left: 30px"><h3>Xin chào {{ tennv }}</h3>
+<a href="/logout"><button>Đăng xuất</button></a>
+<a href="/"><button>Trang chủ</button></a>
+<a href="/dangky"><button>Đăng ký lịch làm</button></a>
+<a href="/xoa"><button>Xóa lịch làm</button></a>
+</div>
+<h2 align="center">ĐỔI MẬT KHẨU</h2>
+    <form style="margin-left: 45px" action="" method="post">
+        <p>Mật khẩu mới</p>
+        <input type="password" name="matkhaumoi">
+        <p>Xác nhận lại mật khẩu mới</p>
+        <input type="password" name="matkhaumoi_xacnhan">
+        <input type="submit" value="Xác nhận">
+    </form>
+    {% if thanhcong %}
+    <p style="color: red">{{ thanhcong }}</p>
+    {% endif %}
+
+</div>
+</body>
+</html>
